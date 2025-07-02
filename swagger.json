@@ -12,7 +12,7 @@
     "/test": {
       "get": {
         "summary": "XSS Test Endpoint",
-        "description": "<script>alert('XSS-GET-description')</script>",
+        "description": "<ScriPt>aLert('XSS-GET-description')</sCript>",
         "responses": {
           "200": {
             "description": "<svg/onload=alert('XSS-response')>"
