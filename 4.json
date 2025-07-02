@@ -1,0 +1,24 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "XSS Double Encoded",
+    "description": "&lt;svg/onload=alert('xss')&gt;"
+  },
+  "host": "example.com",
+  "basePath": "/",
+  "schemes": ["https"],
+  "paths": {
+    "/test": {
+      "get": {
+        "summary": "Try &lt;img src=x onerror=alert('1')&gt;",
+        "description": "&lt;script&gt;alert('SwaggerXSS')&lt;/script&gt;",
+        "responses": {
+          "200": {
+            "description": "&lt;svg/onload=alert('200')&gt;"
+          }
+        }
+      }
+    }
+  }
+}
